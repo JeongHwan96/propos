@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>우리의 이야기</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Noto Serif KR', serif;
+        background: #fffafc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #d26a8d;
+        margin-bottom: 40px;
+      }
+
+      .moment {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #f0d9e7;
+      }
+
+      .moment img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 15px 0;
+      }
+
+      .moment time {
+        display: block;
+        font-size: 0.9rem;
+        color: #999;
+        margin-bottom: 10px;
+      }
+
+      .next-button {
+        display: block;
+        margin: 40px auto;
+        background-color: #d26a8d;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .next-button:hover {
+        background-color: #a64d6b;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>우리의 추억들</h1>
+        <audio autoplay id="bgMusic" src="audio/Happy Birthday To You.mp3"></audio>
+
+      <div class="moment">
+        <time>2020. 01. 11</time>
+        <p>
+          우리가 처음 만나기 시작한 날.<br />
+          많이 어색하고 떨렸지만 <br />
+          착한 너의 모습이 너무 마음에 들었어 장거리 연애였지만 매주 너를 보는게
+          너무 좋았고 <br />
+          너는 잘 모를꺼야 <br />
+          통화 하기까지 얼마나 떨렸고 어떤 말을해야 할지 엄청 고민했어 <br />
+          그래서 매일매일 통화하는게 너무 즐거웠고고 정말 내 인생에는 없을 줄만
+          알았던 순간이였어 <br />
+          그래서 가끔 그 순간이 생각나.
+        </p>
+      </div>
+
+      <div class="moment">
+        <time>2020. 12</time>
+        <p>
+          첫 크리스마스를 함께한 날. <br />
+          내 인생 처음으로 누군가와 둘이서 보낸 크리스마스야 그래서 너무
+          행복했고 즐거웠어 <br />
+          맛있는 음식도 먹고 술도 마시고 같이 늦게 까지 있는게 너무 즐거웠어<br />
+          2020년 겨울은 너와 함께여서 따뜻했어.
+        </p>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="chritmas"
+                src="./img/KakaoTalk_20250520_140325705_01.jpg"
+                alt="크리스마스 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="chritmas"
+                src="./img/KakaoTalk_20250520_140325705_02.jpg"
+                alt="크리스마스 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="chritmas"
+                src="./img/KakaoTalk_20250520_140325705.jpg"
+                alt="크리스마스 사진"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="moment">
+        <time>2020. 06</time>
+        <p>
+          우리 둘이 함께하는 소연이 생일. <br />
+          우리가 처음 만나서 함께한 너의 생일이야 <br />
+          이 날 많이 나름 멋있어 보이려고 머리도 엄청 신경 썼고 <br />
+          옷도 밝은색으로 입었어 <br />
+          이 날 자기 옷도 너무 이뻤고 그냥 전부 이뻤어 그래서 좀 설렜렜어
+        </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="birthday"
+                src="./img/KakaoTalk_20250520_135220027.jpg"
+                alt="생일 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="birthday"
+                src="./img/KakaoTalk_20250520_135220027_01.jpg"
+                alt="생일 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="birthday"
+                src="./img/KakaoTalk_20250520_135220027_02.jpg"
+                alt="생일 사진"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="moment">
+        <time>2023. 02. 18</time>
+        <p>
+          우리가 처음 함께한 첫 여행 <br />
+          놀러가는거 좋아하고 여행 가는거 좋아는 너인데 지금와서 생각 해보니까
+          나 때문에 많이 여행을 못간거 같아 <br />
+          자기 때문에 첫 대구 여행이였고 정말 좋은 기억만 남아있어 <br />
+          맛있는 육회도 먹고 등골도 먹어보고 빨간오뎅도 먹어봤어 <br />
+          그래도 제일 좋았던 건 밤에 케이블카 타고 야경도 보고 이쁜 사진 찍은게
+          정말 좋았어 <br />
+          자기 웃음이 너무 행복해 보였어 그래서 너무 미안했고 너무 고마웠어
+          <br />
+          나한테 좋은 경험 시켜줘서 너무너무 고마워 ♡♥
+        </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/KakaoTalk_20250523_225305938.jpg" alt="여행 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/KakaoTalk_20250520_145502525_02.jpg"
+                alt="여행 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/KakaoTalk_20250523_225259332.jpg" alt="여행 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/KakaoTalk_20250523_225259332_01.jpg"
+                alt="여행 사진"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/KakaoTalk_20250520_145502525.jpg" alt="여행 사진" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <button class="next-button" onclick="location.href='proposal.html'">
+        마지막으로 하고 싶은 말이 있어
+      </button>
+    </div>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          // 자동 슬라이드 설정 , 비 활성화 시 false
+          delay: 1700, // 시간 설정
+          disableOnInteraction: true, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        },
+      });
+    </script>
+  </body>
+</html>

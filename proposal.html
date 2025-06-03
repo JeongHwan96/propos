@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>우리의 약속</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif KR', serif;
+      background: #fffafc;
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      color: #d26a8d;
+      margin-bottom: 40px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .choice-button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: #d26a8d;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+      color: #444;
+    }
+
+    .choice-button:hover {
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 50px;
+    }
+
+    .img_content {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .ryan-img {
+      width: 200px;
+      display: none;
+      margin-top: 30px;
+    }
+
+    /* 꽃잎 애니메이션 */
+    .petal {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('img/petal.png'); /* 생성된 꽃잎 이미지 사용 */
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 9999;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h4>
+    어쩌면 의외의 모습도 있을 수 있고<br>
+    내 행동에 화가 날 수도 있어<br>
+    로맨틱 하게 평생 행복하게 해줄게 라는 약속도 못 할 거야
+  </h4>
+  <h1>하지만 확실히 말할 수 있는 건</h1>
+  <h4>
+    항상 너의 옆에 있을게. 힘들 때나 슬플 때, 행복할 때 모든 순간 너의 옆에 있을게.<br>
+    그리고 맛있는 거 해주고 맛있는 거 먹게 해줄게.
+  </h4>
+  <h2>혹시... 이런 나라도 괜찮으면<br>나와 결혼해줄래?</h2>
+
+  <div class="button-group">
+    <button class="choice-button yes" onclick="showYes()">YES</button>
+    <button class="choice-button no" onclick="alert('정말...? 😢')">NO</button>
+  </div>
+
+  <div class="result" id="resultMessage"></div>
+
+  <div class="img_content">
+    <img src="img/ryan.png" alt="라이언" class="ryan-img" id="ryanImage" />
+    <img src="img/celeb.png" alt="celeb" class="ryan-img" id="ryanImage3" />
+  </div>
+
+  <!-- 오디오 -->
+  <audio autoplay id="bgMusic" src="audio/A Thousand Years.mp3"></audio>
+
+  <script>
+    function showYes() {
+      document.getElementById("resultMessage").innerText = "💍 정말 고마워! 우리 싸우지 말고 이쁜 결혼 생활 보내자 💕";
+      document.getElementById("ryanImage").style.display = "block";
+      document.getElementById("ryanImage3").style.display = "block";
+
+    
+
+      // 꽃잎 애니메이션 시작
+      for (let i = 0; i < 30; i++) {
+        createPetal();
+      }
+    }
+
+    function createPetal() {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+
+      // 랜덤 위치 및 속도
+      petal.style.left = Math.random() * window.innerWidth + "px";
+      petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+      petal.style.opacity = Math.random();
+
+      document.body.appendChild(petal);
+
+      // 일정 시간 후 제거
+      setTimeout(() => {
+        petal.remove();
+      }, 200000);
+    }
+  </script>
+</body>
+</html>

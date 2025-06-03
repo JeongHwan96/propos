@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생일 축하해!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Nanum Pen Script', cursive;
+        background: #fffafc;
+        color: #333;
+        line-height: 1.8;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #d26a8d;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .moment {
+        margin-bottom: 40px;
+      }
+      .emoji {
+        font-size: 3rem;
+      }
+      .birthdayText {
+        font-size: 25px;
+      }
+      .letter {
+        background: #ffeef5;
+        padding: 20px;
+        border-radius: 15px;
+        font-size: 1.5rem;
+      }
+      .next-button {
+        margin-top: 50px;
+        background-color: #d26a8d;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>생일 축하해! 🎉</h1>
+      <div class="moment">
+        <div class="emoji">🎂</div>
+        <p class="birthdayText">세상에서 제일 소중한 너의 생일이야!</p>
+      </div>
+      <div class="moment">
+        <div class="letter">
+          오늘은 너를 위해 준비한 특별한 날이야.<br />
+          너와 함께한 모든 날이 선물이었고,<br />
+          오늘은 너에게 내가 준비한 선물을 전하고 싶어.
+        </div>
+      </div>
+      <button class="next-button" onclick="location.href='props.html'">
+        조그만 선물을 준비했어
+      </button>
+    </div>
+  </body>
+</html>
+
